@@ -1,0 +1,5 @@
+// Renomear para .env e definir a chave. Adicionar no .gitignore
+
+module.exports = {
+    autoSecret: ''
+}
