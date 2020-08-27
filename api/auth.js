@@ -11,7 +11,7 @@ module.exports = (app) => {
 
     if (user) {
       bcrypt.compare(req.body.password, user.password, (err, isMath) => {
-        if (err || !isMath) return res.status(401).send();
+        if (err || !isMath) return res.status(401).send("Senha invalida!");
         const payload = { id: user.id };
         res.json({
           name: user.name,
